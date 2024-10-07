@@ -3,8 +3,10 @@ import SearchOrder from "../features/order/SearchOrder";
 
 function Header() {
   return (
-    <header className="bg-yellow-500">
-      <Link to="/">Fast Pizza Co.</Link>
+    <header className="border-b border-stone-400 bg-yellow-500 px-4 py-3 uppercase">
+      <Link to="/" className="tracking-widest">
+        Fast Pizza Co.
+      </Link>
       <SearchOrder />
     </header>
   );
