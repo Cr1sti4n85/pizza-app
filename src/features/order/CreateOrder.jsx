@@ -1,9 +1,4 @@
-import {
-  Form,
-  redirect,
-  useActionData,
-  useNavigation,
-} from "react-router-dom";
+import { Form, redirect, useActionData, useNavigation } from "react-router-dom";
 import { createOrder } from "../../services/apiRestaurant";
 import Button from "../../ui/Button";
 
@@ -55,23 +50,13 @@ function CreateOrder() {
       <Form method="POST">
         <div>
           <label>First Name</label>
-          <input
-            className="input"
-            type="text"
-            name="customer"
-            required
-          />
+          <input className="input" type="text" name="customer" required />
         </div>
 
         <div>
           <label>Phone number</label>
           <div>
-            <input
-              className="input"
-              type="tel"
-              name="phone"
-              required
-            />
+            <input className="input" type="tel" name="phone" required />
           </div>
           {formErrors?.phone && <p>{formErrors.phone}</p>}
         </div>
@@ -79,12 +64,7 @@ function CreateOrder() {
         <div>
           <label>Address</label>
           <div>
-            <input
-              className="input"
-              type="text"
-              name="address"
-              required
-            />
+            <input className="input" type="text" name="address" required />
           </div>
         </div>
 
@@ -97,18 +77,12 @@ function CreateOrder() {
             // value={withPriority}
             // onChange={(e) => setWithPriority(e.target.checked)}
           />
-          <label htmlFor="priority">
-            Want to yo give your order priority?
-          </label>
+          <label htmlFor="priority">Want to yo give your order priority?</label>
         </div>
 
         <div>
-          <input
-            type="hidden"
-            name="cart"
-            value={JSON.stringify(cart)}
-          ></input>
-          <Button disabled={isSubmitting}>
+          <input type="hidden" name="cart" value={JSON.stringify(cart)}></input>
+          <Button type="primary" disabled={isSubmitting}>
             {isSubmitting ? "Placing Order" : "Order now"}
           </Button>
         </div>
