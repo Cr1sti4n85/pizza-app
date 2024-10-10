@@ -13,7 +13,7 @@ function AppLayout() {
       {isLoading && <Loader />}
       <Header />
       <div className="overflow-scroll">
-        <main className="mx-auto max-w-3xl overflow-auto">
+        <main className="mx-auto max-w-3xl overflow-scroll">
           {/*Outlet renders child component */}
           <Outlet />
         </main>
